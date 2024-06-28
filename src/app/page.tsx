@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { GameProps } from '@/utils/types/games'
 import { BsArrowRightSquare } from 'react-icons/bs'
+import { Input } from '@/components/input'
 
 import Image from "next/image";
 import Link from 'next/link'
@@ -22,7 +23,6 @@ async function getDalyGame() {
 export default async function Home() {
   const dalyGame:GameProps = await getDalyGame()
 
-  console.log(dalyGame)
   return (
     <main className="w-full">
       <Container>
@@ -48,6 +48,7 @@ export default async function Home() {
             </div>
           </div>
         </Link>
+        <Input/>
       </Container>
     </main>
   );
